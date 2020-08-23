@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentence</title>
+    <style>
+        body {
+        text-align: center;
+        background-color: #4acbd4;
+        }
+        div {
+
+            box-shadow: 3px 7px #888888;
+            margin: 35px;
+            padding: 35px;
+            background-color: #f0dfc2;
+            border: 2px solid #800000;
+            border-radius: 25px;
+
+            }
+        p {
+          margin: 35px;
+          padding: 35px;
+          }
+        form {
+              size:"50"
+              }
+
+    </style>
+</head>
+<body>
+<h3><p>Hi there! find out the sentiment of your sentence here</p></h3>
+    <div><form action="{{ url_for('sentiment') }}" method="post">
+           <input size="50" type="text" name="sentence" placeholder="Enter a sentence" >
+            <button>Submit</button>
+    </form></div>
+</body>
+
+</html>
